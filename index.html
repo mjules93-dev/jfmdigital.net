@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO Pay Tracker — JFM Digital</title>
+<meta name="description" content="LEO Pay Tracker is a free iPhone app built for law enforcement officers to track salary, overtime, comp time, and leave balances. Built by a cop, for cops.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #020509; color: #c8d8e8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 
+  /* NAV */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #0d1e32; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .shield { width: 36px; height: 44px; background: #04090f; border: 1.5px solid #D4AF37; border-radius: 4px 4px 18px 18px; display: flex; align-items: center; justify-content: center; }
+  .shield span { color: #D4AF37; font-size: 16px; }
+  .brand-name { color: #D4AF37; font-family: 'Courier New', monospace; font-weight: 900; font-size: 14px; letter-spacing: 2px; }
+  .brand-sub { color: #334155; font-size: 11px; letter-spacing: 1px; }
+  .nav-link { color: #334155; text-decoration: none; font-size: 13px; letter-spacing: 1px; font-family: 'Courier New', monospace; }
+  .nav-link:hover { color: #D4AF37; }
+  nav div { display: flex; gap: 32px; align-items: center; }
+
+  /* HERO */
+  .hero { text-align: center; padding: 100px 40px 80px; max-width: 800px; margin: 0 auto; }
+  .hero-badge { display: inline-block; background: #D4AF3722; border: 1px solid #D4AF3760; color: #D4AF37; font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; margin-bottom: 28px; }
+  .hero h1 { font-size: clamp(32px, 6vw, 56px); font-weight: 800; color: #c8d8e8; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
+  .hero h1 span { color: #D4AF37; }
+  .hero p { font-size: 18px; color: #4b5563; line-height: 1.7; max-width: 560px; margin: 0 auto 40px; }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: #D4AF37; color: #020509; font-family: 'Courier New', monospace; font-weight: 900; font-size: 13px; letter-spacing: 1px; padding: 14px 28px; border-radius: 10px; text-decoration: none; }
+  .btn-primary:hover { background: #b8962e; }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: #D4AF37; font-family: 'Courier New', monospace; font-weight: 900; font-size: 13px; letter-spacing: 1px; padding: 14px 28px; border-radius: 10px; text-decoration: none; border: 1px solid #D4AF3760; }
+  .btn-secondary:hover { background: #D4AF3712; }
+
+  /* FEATURES */
+  .features { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+  .section-label { color: #D4AF37; font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 3px; text-align: center; margin-bottom: 12px; }
+  .section-title { color: #c8d8e8; font-size: clamp(24px, 4vw, 36px); font-weight: 700; text-align: center; margin-bottom: 56px; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .feature-card { background: #04090f; border: 1px solid #0d1e32; border-radius: 12px; padding: 28px; }
+  .feature-icon { font-size: 28px; margin-bottom: 16px; }
+  .feature-card h3 { color: #D4AF37; font-family: 'Courier New', monospace; font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; }
+  .feature-card p { color: #4b5563; font-size: 14px; line-height: 1.7; }
+
+  /* STATS */
+  .stats { background: #04090f; border-top: 1px solid #0d1e32; border-bottom: 1px solid #0d1e32; padding: 60px 40px; }
+  .stats-inner { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+  .stat { text-align: center; }
+  .stat-number { color: #D4AF37; font-family: 'Courier New', monospace; font-weight: 900; font-size: 40px; display: block; }
+  .stat-label { color: #334155; font-size: 12px; letter-spacing: 2px; font-family: 'Courier New', monospace; margin-top: 6px; display: block; }
+
+  /* PRIVACY */
+  .privacy { padding: 80px 40px; max-width: 700px; margin: 0 auto; text-align: center; }
+  .privacy h2 { color: #c8d8e8; font-size: 28px; margin-bottom: 16px; }
+  .privacy p { color: #4b5563; font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
+  .privacy-badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+  .badge { background: #04090f; border: 1px solid #0d1e32; color: #334155; font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 1px; padding: 8px 16px; border-radius: 6px; }
+
+  /* ABOUT */
+  .about { padding: 80px 40px; max-width: 700px; margin: 0 auto; }
+  .about h2 { color: #c8d8e8; font-size: 28px; margin-bottom: 20px; }
+  .about p { color: #4b5563; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+  .about-sig { color: #D4AF37; font-family: 'Courier New', monospace; font-size: 13px; margin-top: 24px; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid #0d1e32; padding: 40px; text-align: center; }
+  footer p { color: #1e293b; font-size: 12px; font-family: 'Courier New', monospace; letter-spacing: 1px; margin-bottom: 8px; }
+  footer a { color: #334155; text-decoration: none; margin: 0 12px; font-size: 12px; font-family: 'Courier New', monospace; }
+  footer a:hover { color: #D4AF37; }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    nav div { gap: 16px; }
+    .hero { padding: 60px 20px 60px; }
+    .features { padding: 60px 20px; }
+    .stats-inner { gap: 40px; }
+    .about, .privacy { padding: 60px 20px; }
+    footer { padding: 30px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="shield"><span>★</span></div>
+    <div>
+      <div class="brand-name">LEO PAY TRACKER</div>
+      <div class="brand-sub">JFM DIGITAL LLC</div>
+    </div>
+  </div>
+  <div>
+    <a href="#features" class="nav-link">FEATURES</a>
+    <a href="#privacy" class="nav-link">PRIVACY</a>
+    <a href="#about" class="nav-link">ABOUT</a>
+    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364" class="btn-primary" style="padding: 10px 20px; font-size: 11px;">DOWNLOAD</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">FREE ON THE APP STORE</div>
+  <h1>Pay tracking built<br>for <span>law enforcement</span></h1>
+  <p>Know your exact hourly rate, track overtime, comp time, and leave balances — all calculated for your actual schedule. Built by a cop, for cops.</p>
+  <div class="hero-buttons">
+    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364" class="btn-primary">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      DOWNLOAD FOR IPHONE
+    </a>
+    <a href="#features" class="btn-secondary">SEE FEATURES</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat">
+      <span class="stat-number">FREE</span>
+      <span class="stat-label">ALWAYS</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">ON-DEVICE</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">0</span>
+      <span class="stat-label">DATA SHARED</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">iOS</span>
+      <span class="stat-label">IPHONE ONLY</span>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="section-label">FEATURES</div>
+  <h2 class="section-title">Everything you need to track your pay</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>ACCURATE HOURLY RATE</h3>
+      <p>Calculates your real hourly rate using your actual scheduled hours per pay period — not the standard 2080 hours that undercounts officers on Pitman, Panama, or non-standard schedules.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔶</div>
+      <h3>OVERTIME TRACKING</h3>
+      <p>Log road jobs, detail work, and mandatory OT at 1.5×, 2×, or any custom rate. Supports higher rank pay — enter annual salary or a direct hourly rate.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📅</div>
+      <h3>SCHEDULE BUILDER</h3>
+      <p>Supports 4/2, Pitman, Panama, DuPont, and custom alternating weekly schedules. Day, evening, and night shift color-coding on your calendar.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>YTD EARNINGS</h3>
+      <p>See your year-to-date base salary, overtime, and training pay at a glance. Tracks multiple contracts — salary changes mid-year are handled automatically.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏖</div>
+      <h3>LEAVE BALANCES</h3>
+      <p>Track vacation, sick, comp time, and custom leave banks in days or hours. Automatic carryover and reset date support.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📤</div>
+      <h3>SHARE YOUR SCHEDULE</h3>
+      <p>Export your shift calendar as a .ics file and share it to iOS Calendar, Google Calendar, or Outlook. Choose 1, 3, 6, or 12 months.</p>
+    </div>
+  </div>
+</section>
+
+<section class="privacy" id="privacy">
+  <div class="section-label">PRIVACY</div>
+  <h2>Your data never leaves your phone</h2>
+  <p>LEO Pay Tracker stores everything — your salary, schedule, OT logs, and leave balances — exclusively on your device using iOS local storage.</p>
+  <p>There are no servers, no accounts, no cloud sync, and no analytics. We have no visibility into how you use the app or what data you enter.</p>
+  <div class="privacy-badges">
+    <div class="badge">NO CLOUD STORAGE</div>
+    <div class="badge">NO ACCOUNTS</div>
+    <div class="badge">NO ANALYTICS</div>
+    <div class="badge">NO ADS</div>
+    <div class="badge">NO DATA SHARING</div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-label">ABOUT</div>
+  <h2>Built by a New Haven officer</h2>
+  <p>I built LEO Pay Tracker because I couldn't find an app that correctly calculated my hourly rate on a Pitman schedule. Every existing tool assumed 2080 annual hours — which is wrong for most LEO schedules and leads to inaccurate OT pay previews.</p>
+  <p>I'm a patrol officer with the New Haven Police Department. My family ran Juliano Fish Market in New Haven for decades. JFM Digital is named in their honor.</p>
+  <p>The app is free. Feedback from officers has driven every feature added since launch. If something is wrong or missing for your department, reach out.</p>
+  <div class="about-sig">— Officer Michael Juliano · New Haven PD · JFM Digital LLC</div>
+</section>
+
+<footer>
+  <p>© 2026 JFM DIGITAL LLC · ALL RIGHTS RESERVED</p>
+  <div style="margin-top: 12px;">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:michael@jfmdigital.net">Contact</a>
+    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">App Store</a>
+  </div>
+</footer>
+
+</body>
+</html>
