@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JFM Digital — Pay Tracking Apps for Professionals</title>
-<meta name="description" content="JFM Digital builds professional pay tracking apps. LEO Pay Tracker for law enforcement. MedPay Tracker for nurses and doctors. Built by a cop. 100% on-device.">
+<title>Privacy Policy — JFM Digital</title>
+<meta name="description" content="Privacy Policy for LEO Pay Tracker and MedPay Tracker by JFM Digital LLC. Your data never leaves your device.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#020712;--deep:#060e1a;--card:#0a1628;--border:#0d2040;
   --gold:#C8972A;--gold-light:#E8B84B;--gold-dim:#6a4e14;--gold-faint:rgba(200,151,42,0.08);
-  --teal:#0d9488;--teal-light:#14b8a6;--teal-dim:#065a54;--teal-faint:rgba(13,148,136,0.08);
   --text:#d4dce8;--muted:#3a5070;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -29,95 +28,24 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .nav-links a:hover{color:var(--gold);}
 
 /* HERO */
-.hero{position:relative;padding:100px 60px 80px;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(13,32,64,0.4) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(13,32,64,0.2) 60px);pointer-events:none;}
-.hero-inner{max-width:1100px;margin:0 auto;text-align:center;position:relative;}
-.hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:28px;}
-.eyebrow-line{width:40px;height:1px;background:var(--gold);}
-.eyebrow-text{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;}
-.hero h1{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,62px);font-weight:900;line-height:1.1;margin-bottom:24px;color:var(--text);}
-.hero h1 em{font-style:italic;color:var(--gold);}
-.hero-desc{font-size:18px;color:var(--muted);line-height:1.75;margin-bottom:60px;font-weight:300;max-width:580px;margin-left:auto;margin-right:auto;}
+.page-hero{padding:80px 60px 60px;border-bottom:1px solid var(--border);}
+.page-hero-inner{max-width:800px;margin:0 auto;}
+.eyebrow{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;display:block;}
+.page-hero h1{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.1;color:var(--text);}
+.page-hero h1 em{font-style:italic;color:var(--gold);}
+.updated{font-family:"DM Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:16px;}
 
-/* APP CARDS */
-.apps{max-width:1100px;margin:0 auto 80px;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:0 60px;}
-.app-card{border-radius:16px;overflow:hidden;border:1px solid var(--border);}
-.app-card-header{padding:36px 36px 28px;}
-.app-card.leo .app-card-header{background:linear-gradient(135deg,#04090f 0%,#060e1a 100%);border-bottom:1px solid var(--border);}
-.app-card.med .app-card-header{background:linear-gradient(135deg,#021a18 0%,#031e1c 100%);border-bottom:1px solid var(--teal-dim);}
-.app-badge{display:inline-block;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:2px;padding:5px 12px;border-radius:100px;margin-bottom:16px;}
-.app-card.leo .app-badge{background:var(--gold-faint);color:var(--gold);border:1px solid rgba(200,151,42,0.3);}
-.app-card.med .app-badge{background:var(--teal-faint);color:var(--teal-light);border:1px solid rgba(13,148,136,0.3);}
-.app-card h2{font-family:"Playfair Display",serif;font-size:28px;font-weight:900;line-height:1.2;margin-bottom:12px;color:var(--text);}
-.app-card-desc{font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;margin-bottom:24px;}
-.app-card-body{background:var(--deep);padding:28px 36px;}
-.feature-list{list-style:none;margin-bottom:28px;}
-.feature-list li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;font-weight:300;}
-.feature-list li:last-child{border-bottom:none;}
-.feat-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
-.app-card.leo .feat-dot{background:var(--gold);}
-.app-card.med .feat-dot{background:var(--teal);}
-.btn-leo{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);font-family:"DM Mono",monospace;font-size:11px;letter-spacing:1.5px;padding:13px 24px;border-radius:6px;text-decoration:none;transition:background 0.2s;font-weight:500;}
-.btn-leo:hover{background:var(--gold-light);}
-.btn-med{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:1.5px;padding:13px 24px;border-radius:6px;text-decoration:none;transition:background 0.2s;font-weight:500;}
-.btn-med:hover{background:var(--teal-light);}
-.btn-soon{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--teal);font-family:"DM Mono",monospace;font-size:11px;letter-spacing:1.5px;padding:13px 24px;border-radius:6px;text-decoration:none;border:1px solid rgba(13,148,136,0.3);}
-
-/* PHONE MOCKUPS */
-.phone-wrap{display:flex;gap:12px;justify-content:center;margin-top:0;}
-.phone-frame{width:200px;background:var(--card);border-radius:28px;border:1.5px solid var(--border);padding:14px 12px 18px;}
-.phone-frame.teal{border-color:var(--teal-dim);}
-.phone-notch{width:70px;height:5px;background:var(--border);border-radius:3px;margin:0 auto 12px;}
-.phone-logo{font-family:"DM Mono",monospace;font-size:7px;letter-spacing:1.5px;}
-.phone-logo.gold{color:var(--gold);}
-.phone-logo.teal{color:var(--teal-light);}
-.phone-date{font-family:"DM Mono",monospace;font-size:7px;color:var(--muted);}
-.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding:0 2px;}
-.pcard{background:var(--deep);border:1px solid var(--border);border-radius:7px;padding:7px;border-left:2px solid var(--gold);margin-bottom:6px;}
-.pcard.teal-accent{border-left-color:var(--teal);}
-.pcard.orange{border-left-color:#f59e0b;}
-.pcard.green{border-left-color:#34d399;}
-.pcard.purple{border-left-color:#a78bfa;}
-.pcard-val{font-family:"DM Mono",monospace;font-size:10px;font-weight:500;color:var(--gold);}
-.pcard-val.teal{color:var(--teal-light);}
-.pcard-val.orange{color:#f59e0b;}
-.pcard-val.green{color:#34d399;}
-.pcard-val.purple{color:#a78bfa;}
-.pcard-label{font-size:6px;color:var(--muted);margin-top:1px;}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:6px;}
-.pytd{border-radius:9px;padding:10px;margin-bottom:6px;}
-.pytd.gold{background:var(--gold-faint);border:1px solid rgba(200,151,42,0.3);}
-.pytd.teal{background:var(--teal-faint);border:1px solid rgba(13,148,136,0.3);}
-.pytd-label{font-family:"DM Mono",monospace;font-size:6px;letter-spacing:1.5px;margin-bottom:3px;}
-.pytd-label.gold{color:var(--gold-dim);}
-.pytd-label.teal{color:var(--teal-dim);}
-.pytd-amount{font-family:"Playfair Display",serif;font-size:20px;font-weight:900;line-height:1;}
-.pytd-amount.gold{color:var(--gold);}
-.pytd-amount.teal{color:var(--teal-light);}
-.pytd-sub{font-size:7px;color:var(--muted);margin-top:3px;}
-
-/* HERITAGE */
-.heritage{background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 60px;}
-.heritage-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:20px;}
-.heritage-mark{font-family:"Playfair Display",serif;font-size:32px;color:var(--gold);font-weight:900;font-style:italic;flex-shrink:0;}
-.heritage-divider{width:1px;height:40px;background:var(--border);flex-shrink:0;}
-.heritage-text{font-family:"DM Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:1px;line-height:1.7;}
-.heritage-text strong{color:var(--text);font-weight:500;}
-
-/* PRIVACY */
-.privacy{padding:100px 60px;max-width:800px;margin:0 auto;text-align:center;}
-.section-eyebrow{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;display:block;}
-.privacy h2{font-family:"Playfair Display",serif;font-size:36px;font-weight:700;color:var(--text);margin-bottom:20px;}
-.privacy p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:12px;font-weight:300;}
-.privacy-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:36px;}
+/* CONTENT */
+.content{max-width:800px;margin:0 auto;padding:60px 60px 100px;}
+.section{margin-bottom:48px;}
+.section h2{font-family:"DM Mono",monospace;font-size:11px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.section p{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:14px;font-weight:300;}
+.section p strong{color:var(--text);font-weight:500;}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
 .pill{background:var(--card);border:1px solid var(--border);color:var(--muted);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;padding:10px 18px;border-radius:100px;}
-
-/* ABOUT */
-.about{background:var(--deep);border-top:1px solid var(--border);padding:100px 60px;}
-.about-inner{max-width:800px;margin:0 auto;}
-.about h2{font-family:"Playfair Display",serif;font-size:36px;font-weight:700;color:var(--text);margin-bottom:28px;}
-.about p{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:18px;font-weight:300;}
-.about-sig{margin-top:36px;padding-top:28px;border-top:1px solid var(--border);font-family:"DM Mono",monospace;font-size:12px;color:var(--gold);letter-spacing:1px;}
+.notice{background:var(--gold-faint);border:1px solid rgba(200,151,42,0.2);border-radius:10px;padding:20px 24px;margin-top:24px;}
+.notice p{color:var(--text);font-size:14px;line-height:1.75;margin:0;}
+.notice p strong{color:var(--gold);}
 
 /* FOOTER */
 footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
@@ -129,11 +57,8 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
 
 @media(max-width:768px){
   nav{padding:20px 24px;}
-  .hero{padding:60px 24px 50px;}
-  .apps{grid-template-columns:1fr;padding:0 24px;}
-  .hero-desc{margin-bottom:40px;}
-  .heritage{padding:24px;}
-  .privacy,.about{padding:60px 24px;}
+  .page-hero{padding:60px 24px 40px;}
+  .content{padding:40px 24px 80px;}
   footer{padding:30px 24px;flex-direction:column;text-align:center;}
   .footer-links{justify-content:center;}
 }
@@ -152,150 +77,89 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
     </div>
   </div>
   <div class="nav-links">
-    <a href="#apps">APPS</a>
-    <a href="privacy.html">PRIVACY</a>
-    <a href="#about">ABOUT</a>
+    <a href="index.html">HOME</a>
+    <a href="index.html#apps">APPS</a>
+    <a href="mailto:contact@jfmdigital.net">CONTACT</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <div class="eyebrow-line"></div>
-      <div class="eyebrow-text">JFM DIGITAL LLC</div>
-      <div class="eyebrow-line"></div>
-    </div>
-    <h1>Pay tracking apps built for<br>the people who <em>work hardest.</em></h1>
-    <p class="hero-desc">Two apps. One mission. Know exactly what you've earned. Built by an officer who got tired of paychecks that didn't add up.</p>
-  </div>
-</section>
-
-<!-- APP CARDS -->
-<div class="apps" id="apps">
-
-  <!-- LEO PAY TRACKER -->
-  <div class="app-card leo">
-    <div class="app-card-header">
-      <div class="app-badge">FOR LAW ENFORCEMENT</div>
-      <h2>LEO Pay Tracker</h2>
-      <p class="app-card-desc">Built around union contracts, rotating schedules, and the way officers actually get paid. OT at higher rank, road jobs, detail pay, fiscal YTD &mdash; all of it.</p>
-      <div class="phone-wrap">
-        <div class="phone-frame">
-          <div class="phone-notch"></div>
-          <div class="ph"><div class="phone-logo gold">LEO PAY TRACKER</div><div class="phone-date">APR 5</div></div>
-          <div class="pytd gold">
-            <div class="pytd-label gold">YEAR-TO-DATE</div>
-            <div class="pytd-amount gold">$24,169</div>
-            <div class="pytd-sub">$22.6k base &middot; $1.1k OT</div>
-          </div>
-          <div class="pgrid">
-            <div class="pcard"><div class="pcard-val">$44.43</div><div class="pcard-label">HOURLY RATE</div></div>
-            <div class="pcard orange"><div class="pcard-val orange">$1,173</div><div class="pcard-label">OT YTD</div></div>
-            <div class="pcard green"><div class="pcard-val green">11.75d</div><div class="pcard-label">VAC LEFT</div></div>
-            <div class="pcard purple"><div class="pcard-val purple">8.0h</div><div class="pcard-label">COMP TIME</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="app-card-body">
-      <ul class="feature-list">
-        <li><div class="feat-dot"></div>OT at 1.5&times;, 2&times;, road jobs &amp; higher rank pay</li>
-        <li><div class="feat-dot"></div>Pitman, Panama, 4/2, DuPont &amp; custom schedules</li>
-        <li><div class="feat-dot"></div>Calendar/Fiscal YTD with year-end projection</li>
-        <li><div class="feat-dot"></div>Off-duty jobs, expenses &amp; pay summary export</li>
-        <li><div class="feat-dot"></div>Backup &amp; restore &mdash; never lose your data</li>
-      </ul>
-      <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364" class="btn-leo">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        FREE ON IPHONE
-      </a>
-    </div>
-  </div>
-
-  <!-- MED PAY TRACKER -->
-  <div class="app-card med">
-    <div class="app-card-header" style="border-color:var(--teal-dim)">
-      <div class="app-badge">FOR NURSES &amp; DOCTORS</div>
-      <h2>MedPay Tracker</h2>
-      <p class="app-card-desc">Night differentials, charge nurse pay, on-call callbacks, RVU tracking, and missed break pay &mdash; every line item on a healthcare paycheck, tracked correctly.</p>
-      <div class="phone-wrap">
-        <div class="phone-frame teal">
-          <div class="phone-notch"></div>
-          <div class="ph"><div class="phone-logo teal">MEDPAY TRACKER</div><div class="phone-date">APR 5</div></div>
-          <div class="pytd teal">
-            <div class="pytd-label teal">YEAR-TO-DATE</div>
-            <div class="pytd-amount teal">$31,840</div>
-            <div class="pytd-sub">$28.4k base &middot; $3.4k diffs</div>
-          </div>
-          <div class="pgrid">
-            <div class="pcard teal-accent"><div class="pcard-val teal">$48.20</div><div class="pcard-label">BASE RATE</div></div>
-            <div class="pcard orange"><div class="pcard-val orange">$2,190</div><div class="pcard-label">OT YTD</div></div>
-            <div class="pcard teal-accent"><div class="pcard-val teal">$840</div><div class="pcard-label">NIGHT DIFF</div></div>
-            <div class="pcard purple"><div class="pcard-val purple">4.5h</div><div class="pcard-label">ON-CALL</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="app-card-body">
-      <ul class="feature-list">
-        <li><div class="feat-dot" style="background:var(--teal)"></div>Night, weekend &amp; charge nurse differentials</li>
-        <li><div class="feat-dot" style="background:var(--teal)"></div>3&times;12, Panama, Pitman, DuPont &amp; custom rotations</li>
-        <li><div class="feat-dot" style="background:var(--teal)"></div>On-call callback, missed break &amp; stipend tracking</li>
-        <li><div class="feat-dot" style="background:var(--teal)"></div>RVU / wRVU tracking for physicians</li>
-        <li><div class="feat-dot" style="background:var(--teal)"></div>Live shift timer with real-time pay calculation</li>
-      </ul>
-      <a href="#" class="btn-soon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        COMING SOON
-      </a>
-    </div>
-  </div>
-
-</div>
-
-<!-- HERITAGE STRIP -->
-<div class="heritage">
-  <div class="heritage-inner">
-    <div class="heritage-mark">JFM</div>
-    <div class="heritage-divider"></div>
-    <div class="heritage-text"><strong>Named for Juliano Fish Market</strong> &mdash; a New Haven institution run by the Juliano family for decades.<br>From the docks of New Haven to the streets of New Haven. Built by a cop who grew up in the market.</div>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">LEGAL</span>
+    <h1>Your data never<br>leaves your <em>device.</em></h1>
+    <div class="updated">LAST UPDATED: APRIL 2026</div>
   </div>
 </div>
 
-<!-- PRIVACY -->
-<section class="privacy" id="privacy">
-  <span class="section-eyebrow">PRIVACY</span>
-  <h2>Your data never leaves your phone</h2>
-  <p>Everything &mdash; your salary, schedule, pay logs, and leave balances &mdash; is stored exclusively on your device using iOS local storage.</p>
-  <p>No servers. No accounts. No cloud sync. No analytics. We have zero visibility into your data.</p>
-  <div class="privacy-pills">
-    <div class="pill">NO CLOUD STORAGE</div>
-    <div class="pill">NO ACCOUNTS</div>
-    <div class="pill">NO ANALYTICS</div>
-    <div class="pill">NO ADS</div>
-    <div class="pill">NO DATA SHARING</div>
-  </div>
-</section>
+<div class="content">
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-inner">
-    <span class="section-eyebrow">ABOUT</span>
-    <h2>From the docks to the badge</h2>
-    <p>I built LEO Pay Tracker because I couldn&rsquo;t find an app that correctly calculated my hourly rate on a Pitman schedule. Every existing tool assumed 2080 annual hours &mdash; wrong for most law enforcement schedules and leading to inaccurate OT pay previews.</p>
-    <p>MedPay Tracker came next. Healthcare workers face the same problem &mdash; complex differential pay, rotating 12-hour shifts, and paychecks that are nearly impossible to verify manually.</p>
-    <p>I&rsquo;m a patrol officer with the New Haven Police Department. My family ran Juliano Fish Market in New Haven for decades. JFM Digital is named in their honor.</p>
-    <p>Both apps are free. Feedback from officers and nurses across the country drives every feature.</p>
-    <div class="about-sig">&mdash; Officer Michael Juliano &middot; New Haven PD &middot; JFM Digital LLC</div>
+  <div class="section">
+    <h2>OVERVIEW</h2>
+    <p>JFM Digital LLC ("we," "us," or "our") builds LEO Pay Tracker and MedPay Tracker — professional pay tracking apps for iPhone. This privacy policy applies to both applications.</p>
+    <p>We built these apps with a simple principle: <strong>your personal and financial data belongs to you, and only you.</strong> We have no servers, no user accounts, and no visibility into anything you enter.</p>
+    <div class="pill-row">
+      <div class="pill">NO CLOUD STORAGE</div>
+      <div class="pill">NO ACCOUNTS</div>
+      <div class="pill">NO ANALYTICS</div>
+      <div class="pill">NO ADS</div>
+      <div class="pill">NO DATA SHARING</div>
+      <div class="pill">NO THIRD-PARTY SDKS</div>
+    </div>
   </div>
-</section>
+
+  <div class="section">
+    <h2>DATA COLLECTION</h2>
+    <p><strong>We collect nothing.</strong> All data you enter — salary, schedule, overtime logs, leave balances, expenses, off-duty job records, officer profile, and pay period configuration — is stored exclusively on your iPhone using iOS local storage (AsyncStorage).</p>
+    <p>This data never leaves your device unless you explicitly choose to export or share it using the built-in export features.</p>
+  </div>
+
+  <div class="section">
+    <h2>EXPORTS & GENERATED DOCUMENTS</h2>
+    <p>The apps include features to export your data as files (HTML summary, CSV spreadsheet) and to generate PDF documents (OT Slip / Overtime Voucher). These files are created entirely on your device.</p>
+    <p>Sharing those files — via email, AirDrop, Messages, or any other method — is entirely your choice and your action. We have no visibility into what you share, with whom, or when.</p>
+    <div class="notice">
+      <p><strong>OT Slip / Overtime Voucher Notice:</strong> The overtime slip feature generates a PDF document for personal recordkeeping purposes only. It is not an official payroll or department document. All calculations are based solely on data you entered into the app. Verify all amounts with your payroll department before submission or reliance on any generated document.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>BACKUP & RESTORE</h2>
+    <p>The Backup & Restore feature creates a JSON file on your device containing your app data. You control where this file is saved or shared. We never receive, store, or have access to backup files.</p>
+  </div>
+
+  <div class="section">
+    <h2>THIRD-PARTY SERVICES</h2>
+    <p>Our apps do not use any third-party analytics, advertising, crash reporting, or data collection services. There are no third-party SDKs that transmit your data anywhere.</p>
+    <p>The apps use Apple's standard iOS frameworks for local storage, file system access, and document sharing — all of which operate on-device.</p>
+  </div>
+
+  <div class="section">
+    <h2>CHILDREN'S PRIVACY</h2>
+    <p>Our apps are designed for working professionals and are not directed at children under 13. We do not knowingly collect any information from children.</p>
+  </div>
+
+  <div class="section">
+    <h2>CHANGES TO THIS POLICY</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="section">
+    <h2>CONTACT</h2>
+    <p>Questions about this privacy policy? Reach us at <strong>contact@jfmdigital.net</strong></p>
+    <p>JFM Digital LLC &middot; New Haven, CT</p>
+  </div>
+
+</div>
 
 <footer>
   <div class="footer-brand">JFM Digital</div>
   <div class="footer-copy">&copy; 2026 JFM DIGITAL LLC &middot; ALL RIGHTS RESERVED</div>
   <div class="footer-links">
     <a href="privacy.html">PRIVACY POLICY</a>
-    <a href="/cdn-cgi/l/email-protection#7615191802171502361c101b121f111f02171a58181302">CONTACT</a>
-    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">APP S
+    <a href="mailto:contact@jfmdigital.net">CONTACT</a>
+    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">APP STORE</a>
+  </div>
+</footer>
+
+</body>
+</html>
