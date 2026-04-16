@@ -3,92 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — LEO Pay Tracker</title>
+<title>Privacy Policy — JFM Digital</title>
+<meta name="description" content="Privacy Policy for LEO Pay Tracker and MedPay Tracker by JFM Digital LLC. Your data never leaves your device.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #020509; color: #c8d8e8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
-  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #0d1e32; }
-  .nav-logo { color: #D4AF37; font-family: 'Courier New', monospace; font-weight: 900; font-size: 14px; letter-spacing: 2px; text-decoration: none; }
-  .nav-back { color: #334155; text-decoration: none; font-size: 13px; font-family: 'Courier New', monospace; }
-  .nav-back:hover { color: #D4AF37; }
-  .content { max-width: 700px; margin: 0 auto; padding: 60px 40px 100px; }
-  h1 { color: #D4AF37; font-family: 'Courier New', monospace; font-size: 24px; letter-spacing: 2px; margin-bottom: 8px; }
-  .updated { color: #334155; font-size: 12px; font-family: 'Courier New', monospace; margin-bottom: 48px; }
-  h2 { color: #c8d8e8; font-size: 16px; font-weight: 600; margin: 36px 0 12px; font-family: 'Courier New', monospace; letter-spacing: 1px; }
-  p { color: #4b5563; font-size: 15px; margin-bottom: 14px; }
-  ul { color: #4b5563; font-size: 15px; padding-left: 20px; margin-bottom: 14px; }
-  li { margin-bottom: 6px; }
-  a { color: #D4AF37; }
-  footer { border-top: 1px solid #0d1e32; padding: 30px 40px; text-align: center; }
-  footer p { color: #1e293b; font-size: 12px; font-family: 'Courier New', monospace; }
-  @media (max-width: 600px) { nav, .content, footer { padding-left: 20px; padding-right: 20px; } }
+:root{
+  --navy:#020712;--deep:#060e1a;--card:#0a1628;--border:#0d2040;
+  --gold:#C8972A;--gold-light:#E8B84B;--gold-dim:#6a4e14;--gold-faint:rgba(200,151,42,0.08);
+  --text:#d4dce8;--muted:#3a5070;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--navy);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden;}
+.rope-top{height:4px;background:repeating-linear-gradient(90deg,var(--gold) 0px,var(--gold) 8px,var(--gold-dim) 8px,var(--gold-dim) 16px);}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 60px;border-bottom:1px solid var(--border);background:var(--deep);}
+.nav-brand{display:flex;align-items:center;gap:18px;}
+.anchor-mark{width:48px;height:48px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;background:var(--gold-faint);flex-shrink:0;}
+.brand-jfm{font-family:"Playfair Display",serif;font-weight:900;font-size:22px;color:var(--gold);letter-spacing:3px;line-height:1;}
+.brand-full{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:4px;}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:2px;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+
+/* HERO */
+.page-hero{padding:80px 60px 60px;border-bottom:1px solid var(--border);}
+.page-hero-inner{max-width:800px;margin:0 auto;}
+.eyebrow{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;display:block;}
+.page-hero h1{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.1;color:var(--text);}
+.page-hero h1 em{font-style:italic;color:var(--gold);}
+.updated{font-family:"DM Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:16px;}
+
+/* CONTENT */
+.content{max-width:800px;margin:0 auto;padding:60px 60px 100px;}
+.section{margin-bottom:48px;}
+.section h2{font-family:"DM Mono",monospace;font-size:11px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.section p{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:14px;font-weight:300;}
+.section p strong{color:var(--text);font-weight:500;}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.pill{background:var(--card);border:1px solid var(--border);color:var(--muted);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;padding:10px 18px;border-radius:100px;}
+.notice{background:var(--gold-faint);border:1px solid rgba(200,151,42,0.2);border-radius:10px;padding:20px 24px;margin-top:24px;}
+.notice p{color:var(--text);font-size:14px;line-height:1.75;margin:0;}
+.notice p strong{color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-brand{font-family:"Playfair Display",serif;font-size:20px;font-weight:900;color:var(--gold);}
+.footer-copy{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:1.5px;}
+.footer-links{display:flex;gap:28px;}
+.footer-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:768px){
+  nav{padding:20px 24px;}
+  .page-hero{padding:60px 24px 40px;}
+  .content{padding:40px 24px 80px;}
+  footer{padding:30px 24px;flex-direction:column;text-align:center;}
+  .footer-links{justify-content:center;}
+}
 </style>
 </head>
 <body>
 
+<div class="rope-top"></div>
+
 <nav>
-  <a href="index.html" class="nav-logo">LEO PAY TRACKER</a>
-  <a href="index.html" class="nav-back">← BACK</a>
+  <div class="nav-brand">
+    <div class="anchor-mark">🦞</div>
+    <div>
+      <div class="brand-jfm">JFM DIGITAL</div>
+      <div class="brand-full">JULIANO FISH MARKET DIGITAL &middot; NEW HAVEN, CT</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="index.html#apps">APPS</a>
+    <a href="mailto:contact@jfmdigital.net">CONTACT</a>
+  </div>
 </nav>
 
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">LEGAL</span>
+    <h1>Your data never<br>leaves your <em>device.</em></h1>
+    <div class="updated">LAST UPDATED: APRIL 2026</div>
+  </div>
+</div>
+
 <div class="content">
-  <h1>PRIVACY POLICY</h1>
-  <div class="updated">Last Updated: April 4, 2026</div>
 
-  <h2>OVERVIEW</h2>
-  <p>LEO Pay Tracker ("the App") is designed with officer privacy as a core principle. All data you enter into the App is stored exclusively on your device and is never transmitted to external servers, third parties, or cloud services of any kind.</p>
+  <div class="section">
+    <h2>OVERVIEW</h2>
+    <p>JFM Digital LLC ("we," "us," or "our") builds LEO Pay Tracker and MedPay Tracker — professional pay tracking apps for iPhone. This privacy policy applies to both applications.</p>
+    <p>We built these apps with a simple principle: <strong>your personal and financial data belongs to you, and only you.</strong> We have no servers, no user accounts, and no visibility into anything you enter.</p>
+    <div class="pill-row">
+      <div class="pill">NO CLOUD STORAGE</div>
+      <div class="pill">NO ACCOUNTS</div>
+      <div class="pill">NO ANALYTICS</div>
+      <div class="pill">NO ADS</div>
+      <div class="pill">NO DATA SHARING</div>
+      <div class="pill">NO THIRD-PARTY SDKS</div>
+    </div>
+  </div>
 
-  <h2>DATA WE COLLECT</h2>
-  <p>We do not collect any personal data. The App does not transmit, upload, or share any information you enter. All data — including your salary, schedule, overtime logs, leave balances, and officer profile — remains on your device at all times.</p>
+  <div class="section">
+    <h2>DATA COLLECTION</h2>
+    <p><strong>We collect nothing.</strong> All data you enter — salary, schedule, overtime logs, leave balances, expenses, off-duty job records, officer profile, and pay period configuration — is stored exclusively on your iPhone using iOS local storage (AsyncStorage).</p>
+    <p>This data never leaves your device unless you explicitly choose to export or share it using the built-in export features.</p>
+  </div>
 
-  <h2>DATA STORED ON YOUR DEVICE</h2>
-  <p>The following information is stored locally on your iPhone only:</p>
-  <ul>
-    <li>Officer profile (name, badge number, rank, department)</li>
-    <li>Salary and contract information</li>
-    <li>Work schedule and shift patterns</li>
-    <li>Overtime, training, and leave log entries</li>
-    <li>Pay period and payroll settings</li>
-    <li>Leave balances (vacation, sick, comp time)</li>
-    <li>App appearance and display preferences</li>
-  </ul>
-  <p>This data is stored using iOS's standard local storage (AsyncStorage) and is never accessible to us or any third party.</p>
+  <div class="section">
+    <h2>EXPORTS & GENERATED DOCUMENTS</h2>
+    <p>The apps include features to export your data as files (HTML pay summary, CSV spreadsheet). These files are created entirely on your device.</p>
+    <p>Sharing those files — via email, AirDrop, Messages, or any other method — is entirely your choice and your action. We have no visibility into what you share, with whom, or when.</p>
 
-  <h2>CALENDAR EXPORT & SHARING</h2>
-  <p>The App includes an optional feature that allows you to export your work schedule as a standard calendar file (.ics format). Regarding this feature:</p>
-  <ul>
-    <li>The exported file is generated entirely from data stored locally on your device</li>
-    <li>No data is transmitted to our servers at any point during this process</li>
-    <li>The file is shared directly from your device using iOS's native share sheet</li>
-    <li>You have full control over who receives the exported file</li>
-    <li>The exported file may contain your scheduled work days and logged entries such as overtime for the time period you select</li>
-    <li>Once shared, the file is subject to the privacy practices of the recipient's calendar application (Apple Calendar, Google Calendar, Outlook, etc.)</li>
-  </ul>
-  <p>We recommend only sharing your schedule with trusted individuals such as family members, supervisors, or union representatives.</p>
+  </div>
 
-  <h2>ANALYTICS & TRACKING</h2>
-  <p>The App does not use any analytics tools, crash reporting services, advertising SDKs, or tracking technologies. We do not know how many people use the App, how often it is opened, or what features are used.</p>
+  <div class="section">
+    <h2>BACKUP & RESTORE</h2>
+    <p>The Backup & Restore feature creates a JSON file on your device containing your app data. You control where this file is saved or shared. We never receive, store, or have access to backup files.</p>
+  </div>
 
-  <h2>THIRD-PARTY SERVICES</h2>
-  <p>The App does not integrate with any third-party services. There are no advertisements, no in-app purchase processors collecting financial information, and no social media integrations.</p>
-  <p>The App is distributed through the Apple App Store. Apple may collect certain usage and diagnostic data as part of their standard platform operations. Please refer to Apple's Privacy Policy at <a href="https://apple.com/privacy">apple.com/privacy</a> for details.</p>
+  <div class="section">
+    <h2>THIRD-PARTY SERVICES</h2>
+    <p>Our apps do not use any third-party analytics, advertising, crash reporting, or data collection services. There are no third-party SDKs that transmit your data anywhere.</p>
+    <p>The apps use Apple's standard iOS frameworks for local storage, file system access, and document sharing — all of which operate on-device.</p>
+  </div>
 
-  <h2>CHILDREN'S PRIVACY</h2>
-  <p>The App is intended for use by law enforcement professionals and is not directed at children under the age of 13. We do not knowingly collect information from children.</p>
+  <div class="section">
+    <h2>CHILDREN'S PRIVACY</h2>
+    <p>Our apps are designed for working professionals and are not directed at children under 13. We do not knowingly collect any information from children.</p>
+  </div>
 
-  <h2>SECURITY</h2>
-  <p>Because all data is stored locally on your device, the security of your information is protected by your device's own security features including Face ID, Touch ID, and your device passcode. We recommend keeping your device secured at all times.</p>
+  <div class="section">
+    <h2>CHANGES TO THIS POLICY</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+  </div>
 
-  <h2>CHANGES TO THIS POLICY</h2>
-  <p>If this privacy policy is updated, the revised policy will be posted at this URL with an updated effective date. Continued use of the App following any changes constitutes acceptance of the updated policy.</p>
+  <div class="section">
+    <h2>CONTACT</h2>
+    <p>Questions about this privacy policy? Reach us at <strong>contact@jfmdigital.net</strong></p>
+    <p>JFM Digital LLC &middot; New Haven, CT</p>
+  </div>
 
-  <h2>CONTACT</h2>
-  <p>If you have questions about this privacy policy or the App's data practices, please contact:</p>
-  <p>Michael Juliano<br>JFM Digital LLC<br><a href="mailto:michael@jfmdigital.net">michael@jfmdigital.net</a></p>
 </div>
 
 <footer>
-  <p>© 2026 JFM DIGITAL LLC · ALL RIGHTS RESERVED</p>
+  <div class="footer-brand">JFM Digital</div>
+  <div class="footer-copy">&copy; 2026 JFM DIGITAL LLC &middot; ALL RIGHTS RESERVED</div>
+  <div class="footer-links">
+    <a href="privacy.html">PRIVACY POLICY</a>
+    <a href="mailto:contact@jfmdigital.net">CONTACT</a>
+    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">APP STORE</a>
+  </div>
 </footer>
 
 </body>
