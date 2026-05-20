@@ -127,6 +127,20 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
 .footer-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold);}
 
+
+/* HERO STATS */
+.hero-stats{display:flex;align-items:center;justify-content:center;gap:32px;margin-bottom:48px;margin-top:36px;}
+.stat-item{text-align:center;}
+.stat-num{font-family:"Playfair Display",serif;font-size:22px;font-weight:900;color:var(--gold);}
+.stat-label{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:4px;}
+.stat-divider{width:1px;height:36px;background:var(--border);}
+
+/* BUTTON GROUP */
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;}
+.btn-android{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--gold);font-family:"DM Mono",monospace;font-size:11px;letter-spacing:1.5px;padding:13px 24px;border-radius:6px;text-decoration:none;transition:all 0.2s;font-weight:500;border:1px solid rgba(200,151,42,0.4);}
+.btn-android:hover{background:var(--gold-faint);border-color:var(--gold);}
+.btn-android-soon{display:inline-flex;align-items:center;color:var(--muted);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;padding:13px 0;}
+
 @media(max-width:768px){
   nav{padding:20px 24px;}
   .hero{padding:60px 24px 50px;}
@@ -169,6 +183,13 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
     </div>
     <h1>Pay tracking apps built for<br>the people who <em>work hardest.</em></h1>
     <p class="hero-desc">Two apps. One mission. Know exactly what you've earned. Built by an officer who got tired of paychecks that didn't add up.</p>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">900+</div><div class="stat-label">DOWNLOADS</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><div class="stat-num">4.8★</div><div class="stat-label">APP STORE</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><div class="stat-num">iOS</div><div class="stat-label">PLATFORM</div></div>
+    </div>
   </div>
 </section>
 
@@ -204,13 +225,18 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
         <li><div class="feat-dot"></div>OT at 1.5&times;, 2&times;, road jobs &amp; higher rank pay</li>
         <li><div class="feat-dot"></div>Pitman, Panama, 4/2, DuPont &amp; custom schedules</li>
         <li><div class="feat-dot"></div>Calendar/Fiscal YTD with year-end projection</li>
+        <li><div class="feat-dot"></div>Net pay modeling with deductions &amp; premium pay</li>
+        <li><div class="feat-dot"></div>Ghost Pay Stub&trade; &mdash; verify every check is correct</li>
+        <li><div class="feat-dot"></div>Auto leave accrual engine &amp; retirement countdown</li>
         <li><div class="feat-dot"></div>Off-duty jobs, expenses &amp; pay summary export</li>
-        <li><div class="feat-dot"></div>Backup &amp; restore &mdash; never lose your data</li>
       </ul>
+      <div class="btn-group">
       <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364" class="btn-leo">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         FREE ON IPHONE
       </a>
+      <span class="btn-android-soon">Android coming soon</span>
+      </div>
     </div>
   </div>
 
@@ -286,7 +312,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
     <h2>From the docks to the badge</h2>
     <p>I built LEO Pay Tracker because I couldn&rsquo;t find an app that correctly calculated my hourly rate on a Pitman schedule. Every existing tool assumed 2080 annual hours &mdash; wrong for most law enforcement schedules and leading to inaccurate OT pay previews.</p>
     <p>MedPay Tracker came next. Healthcare workers face the same problem &mdash; complex differential pay, rotating 12-hour shifts, and paychecks that are nearly impossible to verify manually.</p>
-    <p>I&rsquo;m a patrol officer with the New Haven Police Department. My family ran Juliano Fish Market in New Haven for decades. JFM Digital is named in their honor.</p>
+    <p>I&rsquo;m a patrol officer with the East Haven Police Department. My family ran Juliano Fish Market in New Haven for decades. JFM Digital is named in their honor.</p>
     <p>Both apps are free. Feedback from officers and nurses across the country drives every feature.</p>
     <div class="about-sig">&mdash; Officer Michael Juliano &middot; East Haven PD &middot; JFM Digital LLC</div>
   </div>
