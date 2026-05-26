@@ -12,7 +12,10 @@
   --navy:#020712;--deep:#060e1a;--card:#0a1628;--border:#0d2040;
   --gold:#C8972A;--gold-light:#E8B84B;--gold-dim:#6a4e14;--gold-faint:rgba(200,151,42,0.08);
   --teal:#0d9488;--teal-light:#14b8a6;--teal-dim:#065a54;--teal-faint:rgba(13,148,136,0.08);
-  --text:#d4dce8;--muted:#3a5070;
+  --text:#d4dce8;
+  --body:#8baec8;   /* readable paragraph text — replaces old --muted (#3a5070 failed WCAG) */
+  --muted:#6b8cae;  /* secondary labels, nav links, meta text */
+  --subtle:#3a5070; /* decorative only: borders, dividers, timestamps */
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--navy);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden;}
@@ -23,7 +26,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .nav-brand{display:flex;align-items:center;gap:18px;}
 .anchor-mark{width:48px;height:48px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;background:var(--gold-faint);flex-shrink:0;}
 .brand-jfm{font-family:"Playfair Display",serif;font-weight:900;font-size:22px;color:var(--gold);letter-spacing:3px;line-height:1;}
-.brand-full{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:4px;}
+.brand-full{font-family:"DM Mono",monospace;font-size:9px;color:var(--subtle);letter-spacing:2px;margin-top:4px;}
 .nav-links{display:flex;align-items:center;gap:36px;}
 .nav-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:2px;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
@@ -37,7 +40,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .eyebrow-text{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;}
 .hero h1{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,62px);font-weight:900;line-height:1.1;margin-bottom:24px;color:var(--text);}
 .hero h1 em{font-style:italic;color:var(--gold);}
-.hero-desc{font-size:18px;color:var(--muted);line-height:1.75;margin-bottom:60px;font-weight:300;max-width:580px;margin-left:auto;margin-right:auto;}
+.hero-desc{font-size:18px;color:var(--body);line-height:1.75;margin-bottom:60px;font-weight:400;max-width:580px;margin-left:auto;margin-right:auto;}
 
 /* APP CARDS */
 .apps{max-width:1100px;margin:0 auto 80px;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:0 60px;}
@@ -49,10 +52,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .app-card.leo .app-badge{background:var(--gold-faint);color:var(--gold);border:1px solid rgba(200,151,42,0.3);}
 .app-card.med .app-badge{background:var(--teal-faint);color:var(--teal-light);border:1px solid rgba(13,148,136,0.3);}
 .app-card h2{font-family:"Playfair Display",serif;font-size:28px;font-weight:900;line-height:1.2;margin-bottom:12px;color:var(--text);}
-.app-card-desc{font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;margin-bottom:24px;}
+.app-card-desc{font-size:14px;color:var(--body);line-height:1.75;font-weight:400;margin-bottom:24px;}
 .app-card-body{background:var(--deep);padding:28px 36px;}
 .feature-list{list-style:none;margin-bottom:28px;}
-.feature-list li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;font-weight:300;}
+.feature-list li{font-size:13px;color:var(--body);padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;font-weight:400;}
 .feature-list li:last-child{border-bottom:none;}
 .feat-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
 .app-card.leo .feat-dot{background:var(--gold);}
@@ -71,7 +74,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .phone-logo{font-family:"DM Mono",monospace;font-size:7px;letter-spacing:1.5px;}
 .phone-logo.gold{color:var(--gold);}
 .phone-logo.teal{color:var(--teal-light);}
-.phone-date{font-family:"DM Mono",monospace;font-size:7px;color:var(--muted);}
+.phone-date{font-family:"DM Mono",monospace;font-size:7px;color:var(--subtle);}
 .ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding:0 2px;}
 .pcard{background:var(--deep);border:1px solid var(--border);border-radius:7px;padding:7px;border-left:2px solid var(--gold);margin-bottom:6px;}
 .pcard.teal-accent{border-left-color:var(--teal);}
@@ -83,7 +86,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .pcard-val.orange{color:#f59e0b;}
 .pcard-val.green{color:#34d399;}
 .pcard-val.purple{color:#a78bfa;}
-.pcard-label{font-size:6px;color:var(--muted);margin-top:1px;}
+.pcard-label{font-size:6px;color:var(--subtle);margin-top:1px;}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:6px;}
 .pytd{border-radius:9px;padding:10px;margin-bottom:6px;}
 .pytd.gold{background:var(--gold-faint);border:1px solid rgba(200,151,42,0.3);}
@@ -94,7 +97,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .pytd-amount{font-family:"Playfair Display",serif;font-size:20px;font-weight:900;line-height:1;}
 .pytd-amount.gold{color:var(--gold);}
 .pytd-amount.teal{color:var(--teal-light);}
-.pytd-sub{font-size:7px;color:var(--muted);margin-top:3px;}
+.pytd-sub{font-size:7px;color:var(--subtle);margin-top:3px;}
 
 /* HERITAGE */
 .heritage{background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 60px;}
@@ -108,7 +111,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .privacy{padding:100px 60px;max-width:800px;margin:0 auto;text-align:center;}
 .section-eyebrow{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;display:block;}
 .privacy h2{font-family:"Playfair Display",serif;font-size:36px;font-weight:700;color:var(--text);margin-bottom:20px;}
-.privacy p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:12px;font-weight:300;}
+.privacy p{font-size:16px;color:var(--body);line-height:1.8;margin-bottom:12px;font-weight:400;}
 .privacy-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:36px;}
 .pill{background:var(--card);border:1px solid var(--border);color:var(--muted);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;padding:10px 18px;border-radius:100px;}
 
@@ -116,17 +119,16 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .about{background:var(--deep);border-top:1px solid var(--border);padding:100px 60px;}
 .about-inner{max-width:800px;margin:0 auto;}
 .about h2{font-family:"Playfair Display",serif;font-size:36px;font-weight:700;color:var(--text);margin-bottom:28px;}
-.about p{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:18px;font-weight:300;}
+.about p{font-size:16px;color:var(--body);line-height:1.85;margin-bottom:18px;font-weight:400;}
 .about-sig{margin-top:36px;padding-top:28px;border-top:1px solid var(--border);font-family:"DM Mono",monospace;font-size:12px;color:var(--gold);letter-spacing:1px;}
 
 /* FOOTER */
 footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
 .footer-brand{font-family:"Playfair Display",serif;font-size:20px;font-weight:900;color:var(--gold);}
-.footer-copy{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:1.5px;}
+.footer-copy{font-family:"DM Mono",monospace;font-size:9px;color:var(--subtle);letter-spacing:1.5px;}
 .footer-links{display:flex;gap:28px;}
 .footer-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold);}
-
 
 /* HERO STATS */
 .hero-stats{display:flex;align-items:center;justify-content:center;gap:32px;margin-bottom:48px;margin-top:36px;}
@@ -231,11 +233,11 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
         <li><div class="feat-dot"></div>Off-duty jobs, expenses &amp; pay summary export</li>
       </ul>
       <div class="btn-group">
-      <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364" class="btn-leo">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        FREE ON IPHONE
-      </a>
-      <span class="btn-android-soon">Android coming soon</span>
+        <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364" class="btn-leo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          FREE ON IPHONE
+        </a>
+        <span class="btn-android-soon">Android coming soon</span>
       </div>
     </div>
   </div>
@@ -301,7 +303,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
     <div class="pill">NO ACCOUNTS</div>
     <div class="pill">NO ANALYTICS</div>
     <div class="pill">NO ADS</div>
-    <div class="pill">NO DATA SHARING</div>
+    <div class="pill">NO PAY DATA SHARING</div>
   </div>
 </section>
 
@@ -323,5 +325,10 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
   <div class="footer-copy">&copy; 2026 JFM DIGITAL LLC &middot; ALL RIGHTS RESERVED</div>
   <div class="footer-links">
     <a href="privacy.html">PRIVACY POLICY</a>
-    <a href="/cdn-cgi/l/email-protection#7615191802171502361c101b121f111f02171a58181302">CONTACT</a>
-    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">APP S
+    <a href="mailto:contact@jfmdigital.net">CONTACT</a>
+    <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">APP STORE</a>
+  </div>
+</footer>
+
+</body>
+</html>
