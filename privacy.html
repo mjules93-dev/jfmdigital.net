@@ -11,7 +11,10 @@
 :root{
   --navy:#020712;--deep:#060e1a;--card:#0a1628;--border:#0d2040;
   --gold:#C8972A;--gold-light:#E8B84B;--gold-dim:#6a4e14;--gold-faint:rgba(200,151,42,0.08);
-  --text:#d4dce8;--muted:#3a5070;
+  --text:#d4dce8;
+  --body:#8baec8;   /* readable paragraph text — was --muted (#3a5070, failed WCAG) */
+  --muted:#6b8cae;  /* secondary labels, nav links */
+  --subtle:#3a5070; /* truly decorative: borders, dividers, meta tags */
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--navy);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden;}
@@ -22,7 +25,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .nav-brand{display:flex;align-items:center;gap:18px;}
 .anchor-mark{width:48px;height:48px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;background:var(--gold-faint);flex-shrink:0;}
 .brand-jfm{font-family:"Playfair Display",serif;font-weight:900;font-size:22px;color:var(--gold);letter-spacing:3px;line-height:1;}
-.brand-full{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:4px;}
+.brand-full{font-family:"DM Mono",monospace;font-size:9px;color:var(--subtle);letter-spacing:2px;margin-top:4px;}
 .nav-links{display:flex;align-items:center;gap:36px;}
 .nav-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:2px;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
@@ -33,14 +36,14 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 .eyebrow{font-family:"DM Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;display:block;}
 .page-hero h1{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.1;color:var(--text);}
 .page-hero h1 em{font-style:italic;color:var(--gold);}
-.updated{font-family:"DM Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:16px;}
+.updated{font-family:"DM Mono",monospace;font-size:10px;color:var(--subtle);letter-spacing:1px;margin-top:16px;}
 
 /* CONTENT */
 .content{max-width:800px;margin:0 auto;padding:60px 60px 100px;}
 .section{margin-bottom:48px;}
 .section h2{font-family:"DM Mono",monospace;font-size:11px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);}
-.section p{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:14px;font-weight:300;}
-.section p strong{color:var(--text);font-weight:500;}
+.section p{font-size:16px;color:var(--body);line-height:1.85;margin-bottom:14px;font-weight:400;}
+.section p strong{color:var(--text);font-weight:600;}
 .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
 .pill{background:var(--card);border:1px solid var(--border);color:var(--muted);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;padding:10px 18px;border-radius:100px;}
 .notice{background:var(--gold-faint);border:1px solid rgba(200,151,42,0.2);border-radius:10px;padding:20px 24px;margin-top:24px;}
@@ -50,7 +53,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6
 /* FOOTER */
 footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
 .footer-brand{font-family:"Playfair Display",serif;font-size:20px;font-weight:900;color:var(--gold);}
-.footer-copy{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:1.5px;}
+.footer-copy{font-family:"DM Mono",monospace;font-size:9px;color:var(--subtle);letter-spacing:1.5px;}
 .footer-links{display:flex;gap:28px;}
 .footer-links a{color:var(--muted);text-decoration:none;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold);}
@@ -102,8 +105,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
       <div class="pill">NO ACCOUNTS</div>
       <div class="pill">NO ANALYTICS</div>
       <div class="pill">NO ADS</div>
-      <div class="pill">NO DATA SHARING</div>
-      <div class="pill">NO THIRD-PARTY SDKS</div>
+      <div class="pill">NO PAY DATA SHARING</div>
     </div>
   </div>
 
@@ -114,21 +116,34 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
   </div>
 
   <div class="section">
-    <h2>EXPORTS & GENERATED DOCUMENTS</h2>
-    <p>The apps include features to export your data as files (HTML pay summary, CSV spreadsheet). These files are created entirely on your device.</p>
-    <p>Sharing those files — via email, AirDrop, Messages, or any other method — is entirely your choice and your action. We have no visibility into what you share, with whom, or when.</p>
-
+    <h2>IN-APP PURCHASES</h2>
+    <p>LEO Pay Tracker offers an optional Pro upgrade. Purchases are processed securely by Apple through the App Store. Subscription status is managed by <strong>RevenueCat</strong>, a trusted third-party subscription management platform.</p>
+    <p><strong>What RevenueCat receives:</strong> A pseudonymous device identifier generated by RevenueCat (not your name or Apple ID), purchase receipts, and subscription status events (purchased, renewed, cancelled, expired). RevenueCat does not receive your pay data, log entries, salary information, or any personal details you enter in the app.</p>
+    <p><strong>What Apple receives:</strong> Standard payment processing information associated with your Apple ID, as described in Apple's Privacy Policy. This is the same data Apple collects for any App Store purchase.</p>
+    <p>RevenueCat is SOC 2 certified and does not sell user data. Their privacy policy is available at <strong>revenuecat.com/privacy</strong>.</p>
+    <div class="notice">
+      <p><strong>The core promise remains unchanged.</strong> Your pay data, earnings history, overtime logs, leave balances, and officer profile never leave your device and are never shared with any party — including Apple or RevenueCat.</p>
+    </div>
   </div>
 
   <div class="section">
-    <h2>BACKUP & RESTORE</h2>
-    <p>The Backup & Restore feature creates a JSON file on your device containing your app data. You control where this file is saved or shared. We never receive, store, or have access to backup files.</p>
+    <h2>EXPORTS & GENERATED DOCUMENTS</h2>
+    <p>The Pro tier includes features to export your data as PDF reports and CSV spreadsheets. These files are created entirely on your device.</p>
+    <p>Sharing those files — via email, AirDrop, Messages, or any other method — is entirely your choice and your action. We have no visibility into what you share, with whom, or when.</p>
+  </div>
+
+  <div class="section">
+    <h2>ICLOUD BACKUP</h2>
+    <p>The Backup & Restore feature creates a JSON file containing your app data. This file is saved to your personal iCloud Drive — your private iCloud storage, not JFM Digital's servers. We never receive, store, or have access to backup files.</p>
+    <p>iCloud backup is governed by Apple's iCloud Terms of Service and Privacy Policy.</p>
   </div>
 
   <div class="section">
     <h2>THIRD-PARTY SERVICES</h2>
-    <p>Our apps do not use any third-party analytics, advertising, crash reporting, or data collection services. There are no third-party SDKs that transmit your data anywhere.</p>
-    <p>The apps use Apple's standard iOS frameworks for local storage, file system access, and document sharing — all of which operate on-device.</p>
+    <p>Our apps use the following third-party services:</p>
+    <p><strong>RevenueCat</strong> — subscription and purchase management (LEO Pay Tracker Pro only). Receives purchase receipts and subscription status. Does not receive pay data.</p>
+    <p><strong>Apple StoreKit</strong> — payment processing for in-app purchases. Governed by Apple's Privacy Policy.</p>
+    <p>No analytics, advertising, crash reporting, or behavioral tracking SDKs are used. We do not track app usage, session length, feature usage, or any other behavioral data.</p>
   </div>
 
   <div class="section">
@@ -144,7 +159,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
   <div class="section">
     <h2>CONTACT</h2>
     <p>Questions about this privacy policy? Reach us at <strong>contact@jfmdigital.net</strong></p>
-    <p>JFM Digital LLC &middot; New Haven, CT</p>
+    <p>JFM Digital LLC &middot; Clinton, CT</p>
   </div>
 
 </div>
