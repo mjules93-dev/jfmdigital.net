@@ -160,6 +160,9 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
 .btn-ops{display:inline-flex;align-items:center;gap:10px;background:var(--ops);color:var(--navy);font-family:"DM Mono",monospace;font-size:11px;letter-spacing:1.5px;padding:13px 24px;border-radius:6px;text-decoration:none;transition:background 0.2s;font-weight:500;}
 .btn-ops:hover{background:var(--ops-light);}
 .ops-note{font-family:"DM Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:0.5px;margin-top:12px;line-height:1.6;}
+.ops-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;}
+.ops-links a{color:var(--ops);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:1.5px;text-decoration:none;}
+.ops-links a:hover{color:var(--ops-light);text-decoration:underline;}
 /* browser mockup */
 .web-frame{width:100%;max-width:440px;background:var(--card);border:1.5px solid var(--ops-dim);border-radius:12px;overflow:hidden;}
 .web-bar{display:flex;align-items:center;gap:5px;padding:8px 10px;border-bottom:1px solid var(--border);background:var(--deep);}
@@ -341,16 +344,22 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
     <div class="app-card-header">
       <div class="app-badge">SCHEDULING &middot; OVERTIME &middot; LEAVE</div>
       <h2>LEO Ops</h2>
-      <p class="app-card-desc">The department side of the same problem. Scheduling, overtime, leave and estimated pay for the whole agency, run on your contract&rsquo;s rules instead of a spreadsheet and a phone tree. Built first for East Haven PD.</p>
+      <p class="app-card-desc">The department side of the same problem. Scheduling, overtime, leave and estimated pay for the whole agency, run on your contract&rsquo;s rules instead of a spreadsheet and a phone tree.</p>
       <ul class="feature-list">
         <li><div class="feat-dot"></div>Staffing board and vacancy fill &mdash; the call list follows your CBA&rsquo;s order, points and seniority, with the draft list when it runs dry.</li>
         <li><div class="feat-dot"></div>Leave, trades and shift bids &mdash; officers request on their phone, supervisors approve with the staffing impact in front of them.</li>
         <li><div class="feat-dot"></div>Estimated pay and payroll export &mdash; OT, differentials, holidays and private duty by pay code. Each officer sees only their own pay.</li>
         <li><div class="feat-dot"></div>Your contract as settings &mdash; wage grid, staffing minimums and call-out rules are versioned, so a new CBA doesn&rsquo;t reprice last year.</li>
-        <li><div class="feat-dot"></div>Invite-only accounts, two-factor sign-in for supervisors and payroll, and every agency&rsquo;s data walled off from every other&rsquo;s.</li>
+        <li><div class="feat-dot"></div>Invite-only accounts, two-factor sign-in, and each department&rsquo;s schedule, leave and pay data kept apart from every other department&rsquo;s, on U.S. servers.</li>
       </ul>
-      <a href="mailto:contact@jfmdigital.net?subject=LEO%20Ops%20demo" class="btn-ops">REQUEST A DEMO &rarr;</a>
+      <a href="https://leoopshq.com/demo" class="btn-ops">REQUEST A DEMO &rarr;</a>
       <div class="ops-note">Web app for officers, supervisors, administrators and payroll. Pay figures are estimates; payroll and the CBA govern.</div>
+      <div class="ops-links">
+        <a href="https://leoopshq.com">LEOOPSHQ.COM</a>
+        <a href="https://leoopshq.com/trust">SECURITY</a>
+        <a href="https://leoopshq.com/privacy">PRIVACY</a>
+        <a href="https://leoopshq.com/terms">TERMS</a>
+      </div>
     </div>
     <div class="ops-visual" aria-hidden="true">
       <div class="web-frame">
@@ -385,6 +394,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
   <h2>Your data never leaves your phone</h2>
   <p>In LEO Pay Tracker and MedPay Tracker, everything &mdash; your salary, schedule, pay logs, and leave balances &mdash; is stored exclusively on your device using iOS local storage.</p>
   <p>No servers. No accounts. No cloud sync. No analytics. We have zero visibility into your data.</p>
+  <p>LEO Ops works differently: it&rsquo;s a shared platform for a whole department, so the department&rsquo;s information is kept on secure U.S. servers. See its <a href="https://leoopshq.com/trust" style="color:var(--ops)">security overview</a> and <a href="https://leoopshq.com/privacy" style="color:var(--ops)">privacy policy</a>.</p>
   <div class="privacy-pills">
     <div class="pill">NO CLOUD STORAGE</div>
     <div class="pill">NO ACCOUNTS</div>
@@ -401,7 +411,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
     <h2>From the docks to the badge</h2>
     <p>I built LEO Pay Tracker because every existing tool assumed 2080 annual hours. That’s wrong for Pitman, Panama, 4/2, DuPont, and most law enforcement rotations, and it makes OT previews inaccurate.</p>
     <p>MedPay Tracker came next. Healthcare workers face the same problem &mdash; complex differential pay, rotating 12-hour shifts, and paychecks that are nearly impossible to verify manually.</p>
-    <p>LEO Ops is the department-wide version. The same contract math that tells one officer what their check should be also decides who gets called for overtime, who gets the day off, and what goes to payroll. LEO Ops puts that in one place for the whole agency, starting with East Haven.</p>
+    <p>LEO Ops is the department-wide version. The same contract math that tells one officer what their check should be also decides who gets called for overtime, who gets the day off, and what goes to payroll. LEO Ops puts that in one place for the whole agency.</p>
     <p>I&rsquo;m a patrol officer with the East Haven Police Department. My family ran Juliano Fish Market in New Haven for decades. JFM Digital is named in their honor.</p>
     <p>LEO Pay Tracker is free to download. Founding Member Lifetime is $14.99 one-time for the first 500 officers. Feedback from officers and nurses across the country drives every feature.</p>
     <div class="about-sig">&mdash; Officer Michael Juliano &middot; East Haven PD &middot; JFM Digital LLC</div>
@@ -413,6 +423,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 60
   <div class="footer-copy">&copy; 2026 JFM DIGITAL LLC &middot; ALL RIGHTS RESERVED</div>
   <div class="footer-links">
     <a href="privacy.html">PRIVACY POLICY</a>
+    <a href="https://leoopshq.com">LEO OPS</a>
     <a href="mailto:contact@jfmdigital.net">CONTACT</a>
     <a href="https://apps.apple.com/us/app/leo-pay-tracker/id6761060364">APP STORE</a>
   </div>
